@@ -1,0 +1,109 @@
+---
+title: "STAT545 Homework 1: R Markdown"
+author: Jessica Schaub
+date: September 14, 2018
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This document is part of a homework assignment for the STAT545A course at UBC. The assignment is designed
+to allow students to explore the features of an R Markdown document by exploring a data set. Here, we
+will be using the "Iris" data set, which measures sepals and petals in centimeters of three species 
+of iris flowers:
+
+```{r code, echo=FALSE}
+head(iris)
+```
+
+## Exploring the Data
+
+Using the ability to write R code to generate results, we can explore the data set in greater detail
+
+### Data size
+
+The dimensions of the data set:
+```{r, echo=FALSE}
+paste('Rows:',nrow(iris))
+paste('Columns:',ncol(iris))
+```
+
+### Data Type
+
+The type of data in the data set:
+```{r, echo=FALSE}
+paste("Sepal Length:",class(iris$Sepal.Length))
+paste("Sepal Width:",class(iris$Sepal.Width))
+paste("Petal Length:",class(iris$Petal.Length))
+paste("Petal Width:",class(iris$Petal.Width))
+paste("Species:",class(iris$Species))
+```
+
+### Breaking it Down Further
+
+Other useful information may include the number of observations for each species:
+```{r,echo=FALSE}
+table(iris$Species)
+```
+
+
+## Plotting the Data
+
+We can also use the R code to plot
+
+### The Distribution of Petal Length
+
+Since I have no clue what a *sepal* is, here is a histogram of the petal length:
+
+```{r,echo=FALSE}
+hist(iris$Petal.Length,xlab='Petal Length (cm)',main='Histogram of Iris Petal Length')
+```
+
+There is a strange distribution here, is it possible that this is related to the species? 
+Let's check:
+
+```{r,echo=FALSE}
+par(mfrow=c(1,3))
+hist(iris$Petal.Length[iris$Species=='setosa'],xlab=NULL,xlim=c(0,7),ylim=c(0,20),main='Iris setosa');
+hist(iris$Petal.Length[iris$Species=='versicolor'],xlab='Petal Length (cm)',ylab=NULL,xlim=c(0,7),ylim=c(0,20),main='Iris versicolor');
+hist(iris$Petal.Length[iris$Species=='virginica'],xlab=NULL,ylab=NULL,xlim=c(0,7),ylim=c(0,20),main='Iris virginica')
+
+```
+
+Yes, it looks like the petal size range for each species is different!
+
+Of course, R Markdown combines the features of Markdown and R, so we can plot the information 
+and also include an image of each species!
+
+![*Iris setosa*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/setosa.JPG)
+
+![*Iris versicolor*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/versicolor.JPG)
+
+![*Iris virginica*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/virginica.JPG)
+
+
+## Statistics
+
+Finally, we can use the R code to generate statistics on our data
+
+### Summary
+
+We can output a summary of all major statistics for each variable:
+```{r, echo=FALSE}
+summary(iris)
+```
+
+### Individual
+
+Or we can calculate individual statistics as required:
+```{r,echo=FALSE}
+paste('Mean petal length of Iris versicolor:',mean(iris$Petal.Length[iris$Species=='versicolor']),'cm')
+```
+
