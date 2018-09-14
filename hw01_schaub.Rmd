@@ -81,9 +81,9 @@ and also include an image of each species!
 
 ![*Iris setosa*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/setosa.JPG)
 
-![*Iris versicolor*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/versicolor.JPG)
+![*Iris versicolor*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/versicolor.jpg)
 
-![*Iris virginica*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/virginica.JPG)
+![*Iris virginica*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/virginica.jpeg)
 
 
 ## Statistics
