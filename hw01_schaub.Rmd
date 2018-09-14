@@ -79,9 +79,15 @@ Yes, it looks like the petal size range for each species is different!
 Of course, R Markdown combines the features of Markdown and R, so we can plot the information 
 and also include an image of each species!
 
+*Iris setosa*
+
 ![*Iris setosa*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/setosa.JPG)
 
+*Iris versicolor*
+
 ![*Iris versicolor*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/versicolor.jpg)
+
+*Iris viginica*
 
 ![*Iris virginica*](https://github.com/STAT545-UBC-students/hw01-j-schaub/blob/master/virginica.jpeg)
 
