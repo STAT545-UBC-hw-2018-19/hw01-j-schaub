@@ -2,10 +2,7 @@
 title: "STAT545 Homework 1: R Markdown"
 author: Jessica Schaub
 date: September 14, 2018
-output:
-  prettydoc::html_pretty:
-    theme: hpstr
-    highlight: github
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
