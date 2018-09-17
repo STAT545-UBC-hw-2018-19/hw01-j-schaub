@@ -4,8 +4,10 @@
 This is a repository for a homework assignment designed to introduce students to writing Markdown files in both R and GitHub.
 For more information, please see the [assignment instructions](http://stat545.com/Classroom/assignments/hw01/hw01.html).
 
+The markdown file can be found above, named 'hw01_schaub.md/Rmd'.
+
 ## Index
-You can find the following information here:
+You can find the following information in this README file:
 * **Introduction**
   * **Personal Information** : Some basic information about me
   * **Academics** : An overview of my academic history and interests
